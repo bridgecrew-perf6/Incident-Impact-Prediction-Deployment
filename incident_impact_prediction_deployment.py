@@ -49,7 +49,7 @@ def main():
     u_priority_confirmation = st.sidebar.selectbox("Select u_priority_confirmation",["0", "1"])
     column_1, column_2 = st.beta_columns(2)
     column_1.markdown(index = st.text_input("index","Type Here"),unsafe_allow_html=True)
-    index = st.text_input("index","Type Here")
+    #index = st.text_input("index","Type Here")
     number = st.text_input("number","Type Here")
     opened_by = st.text_input("opened_by","Type Here")
     resolved_by = st.text_input("resolved_by","Type Here")
