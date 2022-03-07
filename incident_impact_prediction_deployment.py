@@ -42,6 +42,10 @@ def main():
     </div>
     """
     st.markdown(html_temp,unsafe_allow_html=True)
+    priority = st.sidebar.selectbox(
+            f"Select {cols[3]}",
+            sorted(features[cols[3]].unique())
+        )
     priority = st.text_input("priority","Type Here")
     urgency = st.text_input("urgency","Type Here")
     index = st.text_input("index","Type Here")
@@ -59,7 +63,7 @@ def main():
         result=predict_note_authentication(priority,urgency,index,number,opened_by,resolved_by,assigned_to,category,knowledge,location,u_priority_confirmation,reassignment_count)
     st.success('The output is {}'.format(result))
     if st.button("About"):
-        st.text("Lets LEarn")
+        st.text("Built By Omkar Katkar")
         st.text("Built with Streamlit")
 
 if __name__=='__main__':
