@@ -38,7 +38,7 @@ def main():
     st.title("Incident Impact Prediction")
     html_temp = """
     <div style="background-color:indigo;padding:10px">
-    <h2 style="color:white;text-align:center;">Streamlit Incident Impact Prediction ML App </h2>
+    <h2 style="color:LightSalmon;text-align:center;">Streamlit Incident Impact Prediction ML App </h2>
     </div>
     """
     st.markdown(html_temp,unsafe_allow_html=True)
