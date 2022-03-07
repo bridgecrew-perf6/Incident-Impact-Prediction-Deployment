@@ -50,7 +50,7 @@ def main():
     index = st.text_input("index","Type Here")
     number = st.text_input("number","Type Here")
     column_1, column_2 = st.beta_columns(2)
-    column_1.markdown(index,unsafe_allow_html=True)
+    column_1.markdown(st.text_input("index","Type Here"),unsafe_allow_html=True)
     column_2.markdown(number,unsafe_allow_html=True)
     
     opened_by = st.text_input("opened_by","Type Here")
