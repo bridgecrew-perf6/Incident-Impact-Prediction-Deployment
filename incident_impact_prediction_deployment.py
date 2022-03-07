@@ -42,6 +42,7 @@ def main():
     </div>
     """
     st.markdown(html_temp,unsafe_allow_html=True)
+    cols = [col for col in features.columns]
     priority = st.sidebar.selectbox(
             f"Select {cols[3]}",
             sorted(features[cols[3]].unique())
