@@ -18,7 +18,7 @@ from PIL import Image
 
 
 
-pickle_in = open("dt_model.pkl","rb")
+pickle_in = open("dt_model_app.pkl","rb")
 classifier=pickle.load(pickle_in)
 
 
