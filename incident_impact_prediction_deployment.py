@@ -37,7 +37,7 @@ def predict_note_authentication(priority,urgency,index,number,opened_by,resolved
 def main():
     st.title("Incident Impact Prediction")
     html_temp = """
-    <div style="background-color:blue;padding:10px">
+    <div style="background-color:indigo;padding:10px">
     <h2 style="color:white;text-align:center;">Streamlit Incident Impact Prediction ML App </h2>
     </div>
     """
