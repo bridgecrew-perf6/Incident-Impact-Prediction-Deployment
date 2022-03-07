@@ -43,7 +43,8 @@ def main():
     """
     st.markdown(html_temp,unsafe_allow_html=True)
     
-    priority = st.sidebar.selectbox()
+    priority = st.sidebar.selectbox("Select yes or no",
+    ["Yes", "No"])
        
     priority = st.text_input("priority","Type Here")
     urgency = st.text_input("urgency","Type Here")
