@@ -48,11 +48,7 @@ def main():
     knowledge = st.sidebar.selectbox("Select Knowledge",["0", "1"])
     u_priority_confirmation = st.sidebar.selectbox("Select u_priority_confirmation",["0", "1"])
     index = st.text_input("index","Type Here")
-    number = st.text_input("number","Type Here")
-    column_1, column_2 = st.beta_columns(2)
-    column_1.markdown('<p class="font-style" >st.text_input("index","Type Here") </p>',unsafe_allow_html=True)
-    column_2.markdown(number,unsafe_allow_html=True)
-    
+    number = st.text_input("number","Type Here")    
     opened_by = st.text_input("opened_by","Type Here")
     resolved_by = st.text_input("resolved_by","Type Here")
     assigned_to = st.text_input("assigned_to","Type Here")
