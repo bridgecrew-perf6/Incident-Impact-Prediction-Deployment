@@ -18,7 +18,7 @@ from PIL import Image
 
 
 
-pickle_in = open("dt_model_app.pkl","rb")
+pickle_in = open("dt_model.pkl","rb")
 classifier=pickle.load(pickle_in)
 
 
@@ -37,32 +37,30 @@ def predict_note_authentication(priority,urgency,index,number,opened_by,resolved
 def main():
     st.title("Incident Impact Prediction")
     html_temp = """
-    <div style="background-color:indigo;padding:10px">
-    <h2 style="color:LightSalmon;text-align:center;">Streamlit Incident Impact Prediction ML App </h2>
+    <div style="background-color:tomato;padding:10px">
+    <h2 style="color:white;text-align:center;">Streamlit Incident Impact Prediction ML App </h2>
     </div>
     """
     st.markdown(html_temp,unsafe_allow_html=True)
-    
-    priority = st.sidebar.selectbox("Select Priority",["0", "1","2", "3"])
-    urgency = st.sidebar.selectbox("Select Urgency",["0", "1","2"])
-    knowledge = st.sidebar.selectbox("Select Knowledge",["0", "1"])
-    u_priority_confirmation = st.sidebar.selectbox("Select u_priority_confirmation",["0", "1"])
+    priority = st.text_input("priority","Type Here")
+    urgency = st.text_input("urgency","Type Here")
     index = st.text_input("index","Type Here")
-    number = st.text_input("number","Type Here")    
+    number = st.text_input("number","Type Here")
     opened_by = st.text_input("opened_by","Type Here")
     resolved_by = st.text_input("resolved_by","Type Here")
     assigned_to = st.text_input("assigned_to","Type Here")
     category = st.text_input("category","Type Here")
-    location = st.text_input("location","Type Here") 
+    knowledge = st.text_input("knowledge","Type Here")
+    location = st.text_input("location","Type Here")
+    u_priority_confirmation = st.text_input("u_priority_confirmation","Type Here")
     reassignment_count = st.text_input("reassignment_count","Type Here")
     result=""
     if st.button("Predict"):
         result=predict_note_authentication(priority,urgency,index,number,opened_by,resolved_by,assigned_to,category,knowledge,location,u_priority_confirmation,reassignment_count)
     st.success('The output is {}'.format(result))
     if st.button("About"):
-        st.text("Built By Omkar Katkar")
+        st.text("Lets LEarn")
         st.text("Built with Streamlit")
 
 if __name__=='__main__':
     main()
-
